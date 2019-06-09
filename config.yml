@@ -1,5 +1,5 @@
 collections:
-  - label: Instellingen
+  - label: Settings
     name: settings
     files:
       - label: CMS
