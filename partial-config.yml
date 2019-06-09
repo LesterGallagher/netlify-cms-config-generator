@@ -1,0 +1,252 @@
+collections:
+  - label: "Settings"
+    name: "settings"
+    files:
+
+# ========================================== CMS ==========================================
+
+      - label: "CMS"
+        name: "cms"
+        file: "static/admin/config.yml"
+        fields:
+          - label: "Site URL"
+            name: "site_url"
+            widget: "string"
+            type: string
+            required: false
+          - label: "Display URL"
+            name: "display_url"
+            widget: "string"
+            type: string
+            required: false
+          - label: "Logo URL"
+            name: "logo_url"
+            widget: "string"
+            type: string
+            required: false
+          - label: "Show Preview Links"
+            name: "show_preview_links"
+            widget: "boolean"
+            type: boolean
+            required: false
+          - label: "Slug"
+            name: "slug"
+            widget: "object"
+            type: object
+            fields:
+              - label: Encoding
+                name: encoding
+                widget: string
+                required: false
+                type: string
+              - label: Clean Accents
+                name: clean_accents
+                widget: boolean
+                required: false
+                type: string
+              - label: Sanitize Replacement
+                name: sanitize_replacement
+                widget: string
+                required: false
+                type: string
+          - label: "Backend"
+            name: "backend"
+            widget: "object"
+            type: object
+            required: false
+            fields:
+              - label: "Name"
+                name: "name"
+                widget: "string"
+                required: false
+                type: string
+              - label: "Branch"
+                name: "branch"
+                widget: "string"
+                required: false
+                type: string
+              - label: "Repo"
+                name: "repo"
+                widget: "string"
+                required: false
+                type: string
+              - label: "Auth Type"
+                name: "auth_type"
+                widget: "string"
+                required: false
+                type: string
+              - label: "App ID"
+                name: "app_id"
+                widget: "string"
+                required: false
+                type: string
+              - label: "Accept Roles"
+                name: "accept_roles"
+                widget: "list"
+                type: list
+                field: 
+                  label: Role
+                  name: role
+                  widget: string
+                  type: string
+          
+          - label: Media folder
+            name: "media_folder"
+            widget: "string"
+            type: string
+          - label: "Public folder"
+            name: "public_folder"
+            widget: "string"
+            type: string
+          - label: "Collections"
+            name: "collections"
+            widget: "list"
+            type: list
+            fields: 
+              - label: Files
+                name: files
+                widget: list
+                type: list
+                required: false
+                fields: 
+                  - label: Label
+                    name: label
+                    widget: string
+                    type: string
+                  - label: Name
+                    name: name
+                    widget: string
+                    type: string
+                  - label: File
+                    name: file
+                    widget: string
+                    type: string
+                  - label: Fields
+                    name: fields
+                    widget: list
+                    type: list
+
+              - label: Folder
+                name: folder
+                widget: string
+                type: string
+                required: false
+              - label: Identifier fields
+                name: identifier_field
+                widget: string
+                type: string
+                required: false
+              - label: Label Singular
+                name: label_singular
+                widget: string
+                type: string
+                required: false
+              - label: Description
+                name: description
+                widget: string
+                type: string
+                required: false
+              - label: Create
+                name: create
+                widget: boolean
+                type: boolean
+                default: true
+                required: false
+              - label: Extension
+                name: extension
+                widget: string
+                type: string
+                required: false
+              - label: Delete
+                name: delete
+                widget: boolean
+                type: boolean
+                default: true
+                required: false
+              - label: Fields
+                name: fields
+                widget: list
+                type: list
+                required: false
+              - label: Label
+                name: label
+                widget: string
+                type: string
+              - label: Name
+                name: name
+                widget: string
+                type: string
+              - label: Filter
+                name: filter
+                widget: object
+                type: object
+                required: false
+                fields:
+                  - label: Field
+                    name: field
+                    widget: string
+                    required: false
+                    type: string
+                  - label: Value
+                    name: value
+                    widget: string
+                    required: false
+                    type: string
+
+              - label: Identifier Field
+                name: identifier_field
+                widget: string
+                required: false
+                type: string
+              - label: Extensions
+                name: extensions
+                widget: select
+                options: ["yml", "yaml", "toml", "json", "md", "markdown", "html"]
+                required: false
+                type: select
+              - label: Format
+                name: format
+                widget: select
+                options: ["yml", "yaml", "toml", "json", "frontmatter", "yaml-frontmatter", "toml-frontmatter", "json-frontmatter"]
+                required: false
+                type: select
+              - label: Frontmatter Delimeter
+                name: frontmatter_delimiter
+                widget: string
+                required: false
+                type: string
+              - label: Slug
+                name: slug
+                widget: string
+                required: false
+                type: string
+              - label: Preview Path
+                name: preview_path
+                widget: string
+                type: string
+                required: false
+              - label: Preview Path Date Field
+                name: preview_path_date_field
+                widget: string
+                type: string
+                required: false
+              - label: Editor
+                name: editor
+                widget: object
+                type: object
+                required: false
+                fields:
+                  - label: Preview
+                    name: preview
+                    widget: boolean
+                    type: boolean
+                    required: false
+              - label: Summary
+                name: summary
+                widget: string
+                required: false
+                type: string
+
+              
+                
+                      

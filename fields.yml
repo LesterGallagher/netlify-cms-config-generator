@@ -1,0 +1,592 @@
+- label: "Boolean"
+  name: "boolean"
+  widget: object
+  type: object
+  fields:
+    - label: Label
+      name: label
+      widget: string
+    - label: Name
+      name: name
+      widget: string
+    - label: Widget
+      name: widget
+      widget: string
+      default: boolean
+      required: true
+    - label: Default
+      name: default
+      widget: boolean
+      required: false
+    - label: Required
+      name: required
+      widget: boolean
+      required: false
+      default: true
+    - label: Hint
+      name: hint
+      widget: string
+      required: false
+    - label: Pattern
+      name: pattern
+      widget: list
+      required: false
+      field: { label: Item, name: item, widget: string }
+
+- label: "Date"
+  name: "date"
+  widget: object
+  type: object
+  fields:
+    - label: Label
+      name: label
+      widget: string
+    - label: Name
+      name: name
+      widget: string
+    - label: Widget
+      name: widget
+      widget: string
+      default: date
+      required: true
+    - label: Default
+      name: default
+      widget: date
+      required: false
+    - label: Format
+      name: format
+      widget: string
+      required: false
+    - label: Required
+      name: required
+      widget: boolean
+      required: false
+      default: true
+    - label: Hint
+      name: hint
+      widget: string
+      required: false
+    - label: Pattern
+      name: pattern
+      widget: list
+      required: false
+      field: { label: Item, name: item, widget: string }
+
+- label: "DateTime"
+  name: "datetime"
+  widget: object
+  type: object
+  fields:
+    - label: Label
+      name: label
+      widget: string
+    - label: Name
+      name: name
+      widget: string
+    - label: Widget
+      name: widget
+      widget: string
+      default: datetime
+      required: true
+    - label: Default
+      name: default
+      widget: datetime
+      required: false
+    - label: Format
+      name: format
+      widget: string  
+      required: false
+    - label: Required
+      name: required
+      widget: boolean
+      required: false
+      default: true
+    - label: Hint
+      name: hint
+      widget: string
+      required: false
+    - label: Pattern
+      name: pattern
+      widget: list
+      required: false
+      field: { label: Item, name: item, widget: string }
+
+- label: "File"
+  name: "file"
+  widget: object
+  type: object
+  fields:
+    - label: Label
+      name: label
+      widget: string
+    - label: Name
+      name: name
+      widget: string
+    - label: Widget
+      name: widget
+      widget: string
+      default: file
+      required: true
+    - label: Default
+      name: default
+      widget: file
+      required: false
+    - label: Format
+      name: format
+      widget: string  
+    - label: Allow Multiple
+      name: allow_multiple
+      widget: boolean
+    - label: Required
+      name: required
+      widget: boolean
+      required: false
+      default: true
+    - label: Hint
+      name: hint
+      widget: string
+      required: false
+    - label: Pattern
+      name: pattern
+      widget: list
+      required: false
+      field: { label: Item, name: item, widget: string }
+
+- label: "Hidden"
+  name: "hidden"
+  widget: object
+  type: object
+  fields:
+    - label: Label
+      name: label
+      widget: string
+    - label: Name
+      name: name
+      widget: string
+    - label: Widget
+      name: widget
+      widget: string
+      default: hidden
+      required: true
+    - label: Default
+      name: default
+      widget: string #mhhh
+      required: false
+    - label: Required
+      name: required
+      widget: boolean
+      required: false
+      default: true
+    - label: Hint
+      name: hint
+      widget: string
+      required: false
+    - label: Pattern
+      name: pattern
+      widget: list
+      required: false
+      field: { label: Item, name: item, widget: string }
+
+- label: "Image"
+  name: "image"
+  widget: object
+  type: object
+  fields:
+    - label: Label
+      name: label
+      widget: string
+    - label: Name
+      name: name
+      widget: string
+    - label: Widget
+      name: widget
+      widget: string
+      default: image
+      required: true
+    - label: Default
+      name: default
+      widget: image
+    - label: Format
+      name: format
+      widget: string  
+      required: false
+    - label: Allow Multiple
+      name: allow_multiple
+      widget: boolean
+      required: false
+    - label: Required
+      name: required
+      widget: boolean
+      required: false
+      default: true
+    - label: Hint
+      name: hint
+      widget: string
+      required: false
+    - label: Pattern
+      name: pattern
+      widget: list
+      required: false
+      field: { label: Item, name: item, widget: string }
+
+- label: "List"
+  name: "list"
+  widget: object
+  type: object
+  fields:
+    - label: Label
+      name: label
+      widget: string
+    - label: Name
+      name: name
+      widget: string
+    - label: Widget
+      name: widget
+      widget: string
+      default: list
+      required: true
+    - label: Default
+      name: default
+      widget: list
+      required: false
+    - label: Allow Add
+      name: allow_add
+      widget: boolean  
+      required: false
+    - label: Field
+      name: field
+      widget: select
+      required: false
+    - label: Fields
+      name: fields
+      widget: list
+      type: object
+    - label: Required
+      name: required
+      widget: boolean
+      required: false
+      default: true
+    - label: Hint
+      name: hint
+      widget: string
+      required: false
+    - label: Pattern
+      name: pattern
+      widget: list
+      required: false
+      field: { label: Item, name: item, widget: string }
+
+    
+- label: "Map"
+  name: "map"
+  widget: object
+  type: object
+  fields:
+    - label: Label
+      name: label
+      widget: string
+    - label: Name
+      name: name
+      widget: string
+    - label: Widget
+      name: widget
+      widget: string
+      default: map    
+      required: true
+    - label: Required
+      name: required
+      widget: boolean
+      required: false
+      default: true
+    - label: Hint
+      name: hint
+      widget: string
+      required: false
+    - label: Pattern
+      name: pattern
+      widget: list
+      required: false
+      field: { label: Item, name: item, widget: string }
+
+- label: "Markdown"
+  name: "markdown"
+  widget: object
+  type: object
+  fields:
+    - label: Label
+      name: label
+      widget: string
+    - label: Name
+      name: name
+      widget: string
+    - label: Widget
+      name: widget
+      widget: string
+      default: markdown   
+      required: true
+    - label: Required
+      name: required
+      widget: boolean
+      required: false
+      default: true
+    - label: Hint
+      name: hint
+      widget: string
+      required: false
+    - label: Pattern
+      name: pattern
+      widget: list
+      required: false
+      field: { label: Item, name: item, widget: string }
+
+- label: "Number"
+  name: "number"
+  widget: object
+  type: object
+  fields:
+    - label: Label
+      name: label
+      widget: string
+    - label: Name
+      name: name
+      widget: string
+    - label: Widget
+      name: widget
+      widget: string
+      default: number    
+      required: true
+    - label: Default
+      name: default
+      widget: number
+      required: false
+    - label: Value Types
+      name: valueType
+      widget: select
+      options: [int, float]
+    - label: Min
+      name: min
+      valueType: float
+      widget: number
+      required: false
+    - label: Max
+      name: max
+      valueType: float
+      widget: number
+      required: false
+    - label: Step
+      name: step
+      widget: number
+      valueType: float
+      required: false
+    - label: Required
+      name: required
+      widget: boolean
+      required: false
+      default: true
+    - label: Hint
+      name: hint
+      widget: string
+      required: false
+    - label: Pattern
+      name: pattern
+      widget: list
+      required: false
+      field: { label: Item, name: item, widget: string }
+
+
+- label: "Object"
+  name: "object"
+  widget: object
+  type: object
+  fields:
+    - label: Label
+      name: label
+      widget: string
+    - label: Name
+      name: name
+      widget: string
+    - label: Widget
+      name: widget
+      widget: string
+      default: object
+      required: true
+    - label: Fields
+      name: fields
+      widget: list 
+    - label: Required
+      name: required
+      widget: boolean
+      required: false
+      default: true
+    - label: Hint
+      name: hint
+      widget: string
+      required: false
+    - label: Pattern
+      name: pattern
+      widget: list
+      required: false
+      field: { label: Item, name: item, widget: string }
+
+- label: "Relation"
+  name: "relation"
+  widget: object
+  type: object
+  fields:
+    - label: Label
+      name: label
+      widget: string
+    - label: Name
+      name: name
+      widget: string
+    - label: Widget
+      name: widget
+      widget: string
+      default: relation
+      required: true
+    - label: Collection
+      name: collection
+      widget: string
+    - label: Search Fields
+      name: searchFields
+      widget: list
+      field: 
+        label: Field
+        name: field
+        widget: string
+    - label: Value Field
+      name: valueField
+      widget: string
+    - label: Display Fields
+      name: displayFields
+      widget: list
+      field: 
+        label: Field
+        name: field
+        widget: string
+    - label: Multiple
+      name: multiple
+      widget: boolean
+      required: false
+    - label: Required
+      name: required
+      widget: boolean
+      required: false
+      default: true
+    - label: Hint
+      name: hint
+      widget: string
+      required: false
+    - label: Pattern
+      name: pattern
+      widget: list
+      required: false
+      field: { label: Item, name: item, widget: string }
+
+- label: "Select"
+  name: "select"
+  widget: object
+  type: object
+  fields:
+    - label: Label
+      name: label
+      widget: string
+    - label: Name
+      name: name
+      widget: string
+    - label: Widget
+      name: widget
+      widget: string
+      default: select
+      required: true
+    - label: Options
+      name: options
+      widget: list
+    - label: Default
+      name: default
+      widget: list
+      required: false
+    - label: Required
+      name: required
+      widget: boolean
+      required: false
+      default: true
+    - label: Hint
+      name: hint
+      widget: string
+      required: false
+    - label: Pattern
+      name: pattern
+      widget: list
+      required: false
+      field: { label: Item, name: item, widget: string }
+
+- label: "String"
+  name: "string"
+  widget: object
+  type: object
+  fields:
+    - label: Label
+      name: label
+      widget: string
+    - label: Name
+      name: name
+      widget: string
+    - label: Widget
+      name: widget
+      widget: string
+      default: string
+      required: true
+    - label: Default
+      name: default
+      widget: string
+      required: false
+    - label: Required
+      name: required
+      widget: boolean
+      required: false
+      default: true
+    - label: Hint
+      name: hint
+      widget: string
+      required: false
+    - label: Pattern
+      name: pattern
+      widget: list
+      required: false
+      field: { label: Item, name: item, widget: string }
+
+- label: "Text"
+  name: "text"
+  widget: object
+  type: object
+  fields:
+    - label: Label
+      name: label
+      widget: string
+    - label: Name
+      name: name
+      widget: string
+    - label: Widget
+      name: widget
+      widget: string
+      default: text
+      required: true
+    - label: Default
+      name: default
+      widget: text
+      required: false
+    - label: Required
+      name: required
+      widget: boolean
+      required: false
+      default: true
+    - label: Hint
+      name: hint
+      widget: string
+      required: false
+    - label: Pattern
+      name: pattern
+      widget: list
+      required: false
+      field: { label: Item, name: item, widget: string }
